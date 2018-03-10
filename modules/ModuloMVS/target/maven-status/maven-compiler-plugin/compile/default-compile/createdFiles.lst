@@ -1,7 +1,7 @@
 Util\Plot.class
-com\pichon\modulomvs\MainApp.class
-Util\Axes.class
 Util\SVM.class
-Util\SalidaAprendizaje.class
+Util\Axes.class
 com\pichon\modulomvs\MVSController.class
 Util\UtilSVM.class
+Util\SalidaAprendizaje.class
+com\pichon\modulomvs\MainApp.class

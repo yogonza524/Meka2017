@@ -10,6 +10,15 @@
     <modules>
         <module>modules/ModuloArbolDecision</module>
 	<module>modules/ModuloBusqueda</module>
+        <module>modules/ModuloGeneticos</module>
+        <module>modules/ModuloKMeans</module>
+        <module>modules/ModuloKVecinos</module>
+        <module>modules/ModuloMVS</module>
+        <module>modules/ModuloPerceptron</module>
+        <module>modules/ModuloPMC</module>
+        <module>modules/ModuloReglasA</module>
+        <module>modules/ModuloSBReglas</module>
+        <module>modules/ModuloSOM</module>
         <module>app</module>
     </modules>
 </project>

@@ -148,5 +148,45 @@
             <artifactId>ModuloBusqueda</artifactId>
             <version>1.0-SNAPSHOT</version>
 	</dependency>
+        <dependency>
+            <groupId>com.pichon</groupId>
+            <artifactId>ModuloReglasA</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.pichon</groupId>
+            <artifactId>ModuloSBReglas</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.pichon</groupId>
+            <artifactId>ModuloGeneticos</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.pichon</groupId>
+            <artifactId>ModuloMVS</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.pichon</groupId>
+            <artifactId>ModuloKVecinos</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.pichon</groupId>
+            <artifactId>ModuloPerceptron</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.pichon</groupId>
+            <artifactId>ModuloKMeans</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.core</groupId>
+            <artifactId>ModuloSOM</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 </project>

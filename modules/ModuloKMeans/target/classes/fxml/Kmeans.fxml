@@ -174,10 +174,7 @@
                            <children>
                               <ScrollPane fx:id="scrollPane" layoutX="19.6" layoutY="19.6" prefHeight="600.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                  <content>
-                                    <AnchorPane fx:id="canvas" prefHeight="800.0" prefWidth="1100.0">
-                                       <children>
-                                          <Slider fx:id="selectorIteracion" prefHeight="14.0" prefWidth="249.0" AnchorPane.leftAnchor="20.0" />
-                                       </children></AnchorPane>
+                                    <AnchorPane fx:id="canvas" prefHeight="800.0" prefWidth="1100.0" />
                                  </content>
                               </ScrollPane>
                            </children>

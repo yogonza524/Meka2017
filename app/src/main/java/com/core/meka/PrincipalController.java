@@ -36,9 +36,9 @@ public class PrincipalController implements Initializable {
     @FXML private VBox SBR_vbox;
     @FXML private VBox mlp_vbox;
     @FXML private VBox perceptron_vbox;
-    @FXML private VBox bayes_vbox;
+    @FXML private VBox arbold_vbox;
     @FXML private VBox geneticos_vbox;
-    @FXML private VBox agentes_vbox;
+    @FXML private VBox knn_vbox;
     @FXML private VBox reglas_asoc_vbox;
     @FXML private VBox cluster_vbox;
     @FXML private VBox som_vbox;
@@ -51,7 +51,7 @@ public class PrincipalController implements Initializable {
     @FXML private ImageView ra;
     @FXML private ImageView agentes;
     @FXML private ImageView geneticos;
-    @FXML private ImageView bayes;
+    @FXML private ImageView arbold_image;
     @FXML private ImageView perceptron;
     @FXML private ImageView mlp; //10
     @FXML private ImageView svm; //8
@@ -78,14 +78,6 @@ public class PrincipalController implements Initializable {
                 }
             }
         });
-        clustering.setOnMouseClicked(new EventHandler<MouseEvent>() {
-            @Override
-            public void handle(MouseEvent event) {
-                if (event.getClickCount() == 1) {
-                    Util.showMainWindowMaximized("Arbol de Decisión", "/fxml/ArbolDecision.fxml", com.pichon.moduloarboldecision.ArbolDController.class, true, false);
-                }
-            }
-        });
         mlp_vbox.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
@@ -98,16 +90,79 @@ public class PrincipalController implements Initializable {
             @Override
             public void handle(MouseEvent event) {
                 if (event.getClickCount() == 1) {
-//                    Util.showMainWindowMaximized("Mapas Auto-Organizados", "/fxml/SOM.fxml", SOMController.class, true, false);
+                    Util.showMainWindowMaximized("Mapas Auto-Organizados", "/fxml/SOM.fxml", com.core.somfx.SOMController.class, true, false);
                 }
             }
         });
         
-        agentes_vbox.setOnMouseClicked(new EventHandler<MouseEvent>() {
+        knn_vbox.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
                 if (event.getClickCount() == 1) {
-//                    Util.showMainWindowMaximized("K-Vecinos próximos", "/fxml/Knn.fxml", KNNController.class, true, false);
+                    Util.showMainWindowMaximized("K-Vecinos próximos", "/fxml/Knn.fxml", com.pichon.modulokvecinos.KNNController.class, true, false);
+                }
+            }
+        });
+        
+        reglas_asoc_vbox.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                if (event.getClickCount() == 1) {
+                    Util.showMainWindowMaximized("Reglas de Asociacion", "/fxml/ReglaA.fxml", com.pichon.moduloreglasa.FXMLControllerRA.class, true, false);
+                }
+            }
+        });
+        
+        SBR_vbox.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                if (event.getClickCount() == 1) {
+                    Util.showMainWindowMaximized("Sistemas Bassados en Reglas", "/fxml/SBasadoReglas.fxml", com.pichon.modulosbreglas.FXMLControllerSBR.class, true, false);
+                }
+            }
+        });
+        
+        geneticos_vbox.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                if (event.getClickCount() == 1) {
+                    Util.showMainWindowMaximized("Algoritmos Genéticos", "/fxml/Scene.fxml", com.pichon.modulogeneticos.FXMLController.class, true, false);
+                }
+            }
+        });
+        
+        svm_vbox.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                if (event.getClickCount() == 1) {
+                    Util.showMainWindowMaximized("Maquina Vector de Soporte", "/fxml/MVS.fxml", com.pichon.modulomvs.MVSController.class, true, false);
+                }
+            }
+        });
+        
+        perceptron_vbox.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                if (event.getClickCount() == 1) {
+                    Util.showMainWindowMaximized("Perceptron", "/fxml/PercepSimple.fxml", com.pichon.moduloperceptron.PerceptronController.class, true, false);
+                }
+            }
+        });
+        
+        cluster_vbox.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                if (event.getClickCount() == 1) {
+                    Util.showMainWindowMaximized("K-Means Clustering", "/fxml/Kmeans.fxml", com.pichon.modulokmeans.KmeansController.class, true, false);
+                }
+            }
+        });
+        
+        arbold_vbox.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                if (event.getClickCount() == 1) {
+                    Util.showMainWindowMaximized("Arbol de Desición", "/fxml/ArbolDecision.fxml", com.pichon.moduloarboldecision.ArbolDController.class, true, false);
                 }
             }
         });
@@ -192,18 +247,18 @@ public class PrincipalController implements Initializable {
                 geneticos.getScene().setCursor(Cursor.DEFAULT);
             }
         });
-        bayes.setOnMouseEntered(new EventHandler<MouseEvent>() {
+        arbold_vbox.setOnMouseEntered(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
-                bayes.setImage(new Image("/img/cambiarColor/Bayes.png"));
-                bayes.getScene().setCursor(Cursor.HAND);
+                arbold_image.setImage(new Image("/img/cambiarColor/Bayes.png"));
+                arbold_image.getScene().setCursor(Cursor.HAND);
             }
         });
-        bayes.setOnMouseExited(new EventHandler<MouseEvent>() {
+        arbold_vbox.setOnMouseExited(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
-                bayes.setImage(new Image("/img/negro/12.png"));
-                bayes.getScene().setCursor(Cursor.DEFAULT);
+                arbold_image.setImage(new Image("/img/negro/12.png"));
+                arbold_image.getScene().setCursor(Cursor.DEFAULT);
             }
         });
         perceptron.setOnMouseEntered(new EventHandler<MouseEvent>() {

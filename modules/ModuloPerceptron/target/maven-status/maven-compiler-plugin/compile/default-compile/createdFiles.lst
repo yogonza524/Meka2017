@@ -1,9 +1,9 @@
-Util\Plot.class
-com\pichon\moduloperceptron\MainApp.class
-Util\Axes.class
-com\pichon\moduloperceptron\PerceptronController.class
-Util\Perceptron.class
 Util\TipoFuncion.class
-Util\ValoresEntrada.class
+Util\Perceptron.class
+Util\Plot.class
+Util\Axes.class
 Util\SalidaAprendizajePercep.class
+com\pichon\moduloperceptron\MainApp.class
 Util\UtilPercep.class
+Util\ValoresEntrada.class
+com\pichon\moduloperceptron\PerceptronController.class
